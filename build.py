@@ -101,7 +101,7 @@ class Faces:
         for key, chars in self.used.items():
             if not chars:
                 continue
-            font = TTFont(ROOT / "fonts" / FONTS[key])
+            font = TTFont(ROOT / "fonts" / FONTS[key], recalcTimestamp=False)
             options = subset.Options()
             options.flavor = "woff"
             options.layout_features = ["kern", "liga"]
