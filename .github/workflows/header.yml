@@ -1,4 +1,4 @@
-name: Generate snake
+name: Draw header
 
 on:
   schedule:
@@ -11,17 +11,18 @@ permissions:
   contents: write
 
 jobs:
-  generate:
+  draw:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: Platane/snk@v3
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/snake.svg?color_snake=#6366f1&color_dots=#ebedf0,#c7d2fe,#a5b4fc,#818cf8,#4f46e5
-            dist/snake-dark.svg?palette=github-dark&color_snake=#a5b4fc&color_dots=#161b22,#312e81,#4338ca,#6366f1,#a5b4fc
-
+          python-version: "3.13"
+      - run: pip install fonttools==4.67.0
+      - run: python render.py dist/header.svg
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
