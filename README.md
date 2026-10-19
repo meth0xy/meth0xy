@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&height=210&color=0:0f172a,55:312e81,100:6366f1&text=Deniz%20Erginos&fontColor=ffffff&fontSize=54&fontAlignY=36&desc=Engineering%20%26%20Product%20Lead%20%C2%B7%20Medical%20Software&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Deniz Erginos" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=210&color=0:0f172a,55:312e81,100:6366f1&text=Deniz%20Erginos&fontColor=ffffff&fontSize=54&fontAlignY=36&desc=Engineering%20%26amp%3B%20Product%20Lead%20%C2%B7%20Medical%20Software&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Deniz Erginos" />
 
 <p align="center">
   <a href="https://erginos.io">
