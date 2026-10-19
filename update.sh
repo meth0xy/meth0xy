@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 set -euo pipefail
-cd "${0:A:h}"
+cd "$(dirname "$(readlink -f "$0")")"
 git pull --ff-only --quiet
 .venv/bin/python stats.py >/dev/null
 .venv/bin/python build.py >/dev/null
