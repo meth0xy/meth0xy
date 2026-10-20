@@ -404,10 +404,17 @@ def svg(w, h, label, inner):
     )
 
 
+def flyva_json(stats):
+    """Read by erginos.io. Only Flyva, the other apps' numbers stay out of the public repo."""
+    flyva = stats["apps"]["flyva"]
+    return json.dumps({"downloads": flyva["downloads"], "countries": flyva["countries"]}) + "\n"
+
+
 def main():
     stats = json.loads((ROOT / "stats.json").read_text())
     out = {
         "header.svg": header(stats),
+        "flyva.json": flyva_json(stats),
         **{f"{t['slug']}.svg": tile(t) for t in TILES},
         "work.svg": work(),
         "stack.svg": stack(),
