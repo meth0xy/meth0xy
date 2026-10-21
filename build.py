@@ -1,4 +1,5 @@
 import base64
+import hashlib
 import io
 import json
 import re
@@ -381,9 +382,10 @@ def link(l):
     return svg(W, H, l["label"], styles(f, *css) + "".join(body))
 
 
-def readme(stats):
+def readme(stats, assets):
     def img(src, width, alt):
-        return f'<img src="assets/{src}" width="{width}" alt="{esc(alt)}" />'
+        version = hashlib.sha1(assets[src].encode()).hexdigest()[:8]
+        return f'<img src="assets/{src}?v={version}" width="{width}" alt="{esc(alt)}" />'
 
     tiles = "\n".join(
         f'  <a href="{t["url"]}">{img(t["slug"] + ".svg", 404, tile_label(t))}</a>' for t in TILES)
@@ -423,7 +425,7 @@ def main():
     for name, content in out.items():
         (OUT / name).write_text(content)
         print(f"assets/{name}: {len(content) // 1024} KB")
-    (ROOT / "README.md").write_text(readme(stats))
+    (ROOT / "README.md").write_text(readme(stats, out))
 
 
 if __name__ == "__main__":
