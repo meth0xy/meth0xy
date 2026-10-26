@@ -80,12 +80,13 @@ STACK = [
 ]
 
 LINKS = [
-    {"slug": "site", "url": "https://erginos.io", "icon": None, "label": "erginos.io", "w": 176},
-    {"slug": "linkedin", "url": "https://www.linkedin.com/in/derginos", "icon": "linkedin", "label": "LinkedIn", "w": 176},
+    {"slug": "site", "url": "https://erginos.io", "icon": None, "label": "erginos.io", "w": 148},
+    {"slug": "linkedin", "url": "https://www.linkedin.com/in/derginos", "icon": "linkedin", "label": "LinkedIn", "w": 140},
+    {"slug": "x", "url": "https://x.com/erginos_io", "icon": "x", "label": "X", "w": 96},
     {"slug": "app-store", "url": "https://apps.apple.com/app/id6759984213", "icon": "apple",
-     "label": "Flyva · App Store", "w": 224},
+     "label": "Flyva · App Store", "w": 200},
     {"slug": "google-play", "url": "https://play.google.com/store/apps/details?id=app.flyva", "icon": "googleplay",
-     "label": "Flyva · Google Play", "w": 224},
+     "label": "Flyva · Google Play", "w": 208},
 ]
 
 
