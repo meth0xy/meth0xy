@@ -1,4 +1,4 @@
-<a href="https://flyva.app"><img src="assets/header.svg?v=cdc1acce" width="812" alt="Deniz Erginos, Lead Software Engineer and Technical Product Owner. Flyva: meal plans from this week's grocery deals, 3,598 downloads in 49 countries." /></a>
+<a href="https://flyva.app"><img src="assets/header.svg?v=80cdc922" width="812" alt="Deniz Erginos, Lead Software Engineer and Technical Product Owner. Flyva: meal plans from this week's grocery deals, 3,634 downloads in 49 countries." /></a>
 
 <p>
   <a href="https://apps.apple.com/app/id6762126820"><img src="assets/ai-journal.svg?v=d06278a2" width="404" alt="AI Journal: Speak your entries instead of typing. AI cleans up the text and writes weekly and monthly recaps." /></a>
